@@ -1,35 +1,21 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Menus</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Descrip</th>
-      <th>Time</th>
-      <th>Location</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @menus.each do |menu| %>
-      <tr>
-        <td><%= menu.name %></td>
-        <td><%= menu.image %></td>
-        <td><%= menu.descrip %></td>
-        <td><%= menu.time %></td>
-        <td><%= location.name %></td>
-        <td><%= link_to 'Show', menu %></td>
-        <td><%= link_to 'Edit', edit_menu_path(menu) %></td>
-        <td><%= link_to 'Destroy', menu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<center>
+<h1>Two Menus: Morning and Everything Else</h1><br>
+<div class="row">
+  <% @menus.each do |menu| %>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="<%= menu.image %>">
+      <div class="caption">
+        <h3><%= menu.name %></h3>
+        <h4><%= menu.descrip %></h4>
+        <!-- <%= link_to "Menu", menu, class: "btn btn-default" %> -->
+      </div>  
+    </div>  
+  </div>
+  <% end %>
+</div>
+</center>
 
 <br>
 
-<%= link_to 'New Menu', new_menu_path %>
+<!-- <%= link_to "Add a New Menu", new_menu_path, class: "btn btn-primary" %> -->
