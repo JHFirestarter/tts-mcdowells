@@ -1,3 +1,3 @@
 class Location < ActiveRecord::Base
-	belongs to :menu
+	has many :menus
 end
