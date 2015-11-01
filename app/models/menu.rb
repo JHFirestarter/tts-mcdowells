@@ -1,3 +1,3 @@
 class Menu < ActiveRecord::Base
-	belongs to :location
+	belongs_to :location
 end

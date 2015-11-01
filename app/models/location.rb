@@ -1,3 +1,3 @@
 class Location < ActiveRecord::Base
-	has many :menus
+	has_many :menus
 end
