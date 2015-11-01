@@ -69,6 +69,6 @@ class SidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def side_params
-      params.require(:side).permit(:name, :image, :descrip, :price)
+      params.require(:side).permit(:name, :image, :descrip, :price, :menu_id)
     end
 end
